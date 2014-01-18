@@ -8,15 +8,11 @@ This driver/module based on the [latest datasheet from ams](http://www.ams.com/e
 
 ## Install
 ```
-#!bash
-
 $ npm install sensor_tsl2561
 ```
 #### Raspberry PI
 Enable [i2c on your Pi](https://github.com/kelly/node-i2c#raspberry-pi-setup) if you haven't done already. To avoid having to run the i2c tools as root add the ‘pi’ user to the i2c group:
 ```
-#!bash
-
 sudo adduser pi i2c
 ```
 
@@ -25,9 +21,7 @@ The module is easy to use. You have different config-options
 
 ### Simple Usage
 ```
-#!javascript
-
-var TSL2561 = require('sensorTSL2561');
+var TSL2561 = require('sensor_tsl2561');
 
 var sense = new TSL2561();
 sense.init(function(err, val) {
@@ -40,13 +34,11 @@ sense.init(function(err, val) {
 ```
  
 ### Don't forget to call init()
-The ```ìnit```-call power up the sensor and set the given options.
+```ìnit()``` powers up the sensor and sets the given options.
 
 ### Options
 The default options are:
 ```
-#!javascript
-
 {
     'debug': false,
     'address': 0x39,
@@ -60,8 +52,6 @@ The default options are:
 
 Configure the sensor by supplying an options object to the constructor like:
 ```
-#!javascript
-
 var sense = new TSL2561({
     'timingMode': '13.7ms',
     'gainMode': '16'
@@ -74,8 +64,6 @@ The sensor is available as package type "CS" or "T/FN/CL". The package types are
 ### Getter & Setter for sensor settings
 Getter supports only callbacks. Setter supports callbacks and event-emitters - ```sensorSettingChanged``` and ```sensorSettingFailed```. Getter and setter are:
 ```
-#!javascript
-
 getPowerMode(cB) / setPowerMode(newMode, [cB]) / modes: 'powerUp', 'powerDown'
 getTimingMode(cB) / setTimingMode(newMode, [cB]) / modes: '13.7ms', '101ms', '402ms', 'n/a'
 getGainMode(cB) / setGainMode(newMode, [cB]) / modes: '1', '16'
@@ -83,8 +71,6 @@ getGainMode(cB) / setGainMode(newMode, [cB]) / modes: '1', '16'
 
 The ```sensorId``` is only a getter:
 ```
-#!javascript
-
 getSensorId(cB) / with 'TSL2560CS', 'TSL2561CS', 'TSL2560T/FN/CL', 'TSL2561T/FN/CL'
 ```
 
