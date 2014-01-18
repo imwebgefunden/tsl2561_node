@@ -1,5 +1,5 @@
 {
-  "name": "sensorTSL2561",
+  "name": "sensor_tsl2561",
   "version": "0.2.0",
   "description": "A node.js-module for the TSL2561 light sensor",
   "main": "tsl2561.js",

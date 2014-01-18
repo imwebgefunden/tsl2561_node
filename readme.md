@@ -10,7 +10,7 @@ This driver/module based on the [latest datasheet from ams](http://www.ams.com/e
 ```
 #!bash
 
-$ npm install sensorTSL2561
+$ npm install sensor_tsl2561
 ```
 #### Raspberry PI
 Enable [i2c on your Pi](https://github.com/kelly/node-i2c#raspberry-pi-setup) if you haven't done already. To avoid having to run the i2c tools as root add the ‘pi’ user to the i2c group:
