@@ -1,0 +1,41 @@
+{
+  "name": "sensorTSL2561",
+  "version": "0.2.0",
+  "description": "A node.js-module for the TSL2561 light sensor",
+  "main": "tsl2561.js",
+  "dependencies": {
+    "i2c": "~0.1.4",
+    "underscore": "~1.5.2",
+    "async": "~0.2.9",
+    "proxyquire": "~0.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Schneider",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.2.2"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "i2c",
+    "sensor",
+    "light",
+    "tsl2561"
+  ],
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imwebgefunden/tsl2561_node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imwebgefunden/tsl2561_node/issues"
+  },
+  "homepage": "https://github.com/imwebgefunden/tsl2561_node"
+}
